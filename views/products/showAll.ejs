@@ -1,0 +1,36 @@
+<%-include("../header")%>
+
+    <table class="table table-bordered table-striped">
+        <th>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>price</th>
+                <th>Description</th>
+
+            </tr>
+        </th>
+
+        <tbody>
+            <%data.forEach((item)=>{%>
+                <tr>
+                    <td>
+                        <img src="<%=item.image%>" width="150" height="100" />
+                    </td>
+
+                    <td>
+                        <%=item.name%>
+                    </td>
+                    <td>
+                        <%=item.price%>
+                    </td>
+                    <td>
+                        <%=item.description%>
+                    </td>
+                </tr>
+
+                <%})%>
+
+        </tbody>
+    </table>
+    <%-include("../footer")%>
